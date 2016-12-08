@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Siswa</title>
+        <link href="/lib/css/material-icons.css" rel="stylesheet">
+        <link href="/lib/css/font-awesome.css" rel="stylesheet">
+        <link href="/lib/css/font-awesome.min.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="/lib/css/materialize.css"  media="screen,projection"/>
+        <script src="/lib/js/jquery.min.js"></script>
+        <script src="/lib/js/materialize.min.js"></script>
+        <script src="/lib/js/angular.min.js"></script>
+        <script src="/lib/js/angular-route.min.js"></script>
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/controller/dataController.js"></script>
+        <script src="/scripts/service/dataService.js"></script>
+    </head>
+    <body ng-app="dataSiswa" class="grey lighten-4">
+        <div class="navbar-fixed">
+            <nav class="blue accent-3">
+              <div class="nav-wrapper container">
+                <a href="#/" class="brand-logo light"><i class="material-icons left">school</i> Data Siswa</a>
+              </div>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="section no-pad-bot" id="index-banner">
+                <div class="container">
+                    <h2 class="header center grey-text light"></h2>
+                    <div class="row center">
+                        <div class="card-panel">
+                            <div class="card-title">
+                                <h4 class="header center grey-text light"><i class="fa fa-sign-in"></i> Login</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="row">
+                                    <form action="/login" method="post" >
+                                        <div class="input-field col s12">
+                                            <input name="username" type="text" class="validate" placeholder="Username">
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input name="password" type="password" class="validate" placeholder="Password">
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <button type="submit" class="btn blue accent-3 waves-effect waves-light">Login</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            Copyright &copy; 2016 <a href="https://www.facebook.com/profile.php?id=100005546550115">Ichsan Firdaus</a>
+        </div>
+    </body>
+</html>

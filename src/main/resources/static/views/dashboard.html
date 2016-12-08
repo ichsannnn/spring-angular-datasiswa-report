@@ -1,0 +1,43 @@
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <h2 class="header center grey-text light">Data Siswa</h2>
+  </div>
+</div>
+<div class="card-panel">
+    <div class="row">
+        <div class="input-field col s12">
+            <input ng-model="currentSiswa.nis" type="text" class="validate" placeholder="NIS">    
+        </div>
+        <div class="input-field col s12">
+            <input ng-model="currentSiswa.nama" type="text" class="validate" placeholder="Nama">
+        </div>
+        <div class="input-field col s12">
+            <input ng-model="currentSiswa.kelas" type="text" class="validate" placeholder="Kelas">
+        </div>
+        <div class="input-field col s12 center">
+            <button class="btn blue accent-3 waves-effect waves-light" ng-click="saveData(currentSiswa)">Simpan</button>
+        </div>
+    </div>
+    <div>
+        <button ng-click="showData()" class="btn blue accent-3 waves-effect waves-light">Tampilkan Data</button>
+        <table class="striped centered responsive-table">
+            <thead>
+                <th>NIS</th>
+                <th>Nama</th>
+                <th>Kelas</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="siswa in dataServer">
+                    <td>{{ siswa.nis }}</td>
+                    <td>{{ siswa.nama }}</td>
+                    <td>{{ siswa.kelas }}</td>
+                    <td>
+                        <button ng-click="editData(siswa)" class="btn green accent-3 waves-effect waves-light">Edit</button>
+                        <button ng-click="deleteData(siswa.id)" class="btn red accent-3 waves-effect waves-light">Hapus</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
